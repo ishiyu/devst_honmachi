@@ -6,3 +6,26 @@ pull			リモードリポジトリで加えられた変更を、
 			現在のブランチにマージする。
 push			自分のリポジトリの内容をほかのリポジトリ
 			（一般的には公開リポジトリ）に送信して取り込ませるコマンド
+
+
+
+
+今まで
+git pull　　-->    git fetch + git mergeと同じ
+edit
+git add .
+git commit
+git push
+
+これだと、conflictしたときにcommitが２回発生するので、
+これからは、以下のようにしよう！！！
+
+git pull --rebase        --> git fetch + git rebase と同じ
+edit
+git add .
+git rebase --continue
+git push
+
+
+
+
